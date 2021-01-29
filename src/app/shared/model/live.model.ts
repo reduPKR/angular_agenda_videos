@@ -1,10 +1,9 @@
-export class Live {
-    id: string;
-    liveName: string;
-    channelName: string;
-    liveDate: string;
-    liveTime: string;
-    liveLink: string;
-    registrationDate: string;
-    urlSafe: SafeResourceUrl;
+export class Live{
+    id: string | undefined;
+    liveName: string | undefined;
+    channelName: string | undefined;
+    liveDate: string | undefined;
+    liveTime: string | undefined;
+    liveLink: string | undefined;
+    registrationDate: string | undefined;
 }
