@@ -15,7 +15,6 @@ public class LiveService {
     private final LiveRepository repository;
 
     @Autowired
-
     public LiveService(LiveRepository repository) {
         this.repository = repository;
     }
