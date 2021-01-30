@@ -9,21 +9,22 @@ import { LiveService } from 'src/app/shared/service/live.service';
 })
 export class LiveListComponent implements OnInit {
 
-  livePrevius: Live[] = [];
+  livePrevious: Live[] = [];
   liveNext: Live[] = [];
 
   constructor(private liveService: LiveService) { }
 
   ngOnInit(): void {
-    this.getPrevius();
+    this.getPrevious();
+    this.getNext();
   }
 
-  getPrevius(){
+  getPrevious(){
     this.liveService.getLivesWithFlag('previous').subscribe(
       data=>{
         console.log(data)
-        this.livePrevius = data.content;
-        console.log(this.livePrevius)
+        this.livePrevious = data.content;
+        console.log(this.livePrevious)
       }
     );
   }

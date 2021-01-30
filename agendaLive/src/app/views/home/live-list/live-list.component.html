@@ -1,29 +1,34 @@
 <mat-tab-group class="padding_tab">
     <mat-tab label="Proximas"> 
-        <div fxLayout="row" fxLayoutAlign="start center" style="padding: 2%;">
+        <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%;">
             <ng-container *ngFor="let item of liveNext" style="margin: 1%;">
-                <mat-card class="example-card" fxFlex.lt-sm="100%" fxFlex.lt-md="0 1 calc(50% 11px)" fxFlex="0 1calc(33.3% 11px)">
-                <mat-card-header>
-
-                </mat-card-header>
-                <mat-card-content>
-                    <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                    </p>
-                </mat-card-content>
+                <mat-card class="mat-card-live" fxFlex="0 1 calc(33.3% - 11px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+                    <mat-card-title class="mat-card-title-live">
+                        <div class="row">
+                            <p>
+                                <span fxFlex="70"  fxLayoutAlign="start center">{{item.liveName}}</span>
+                                <span fxFlex></span>
+                                <span fxFlex="20"  fxLayoutAlign="end center">{{item.liveDate}}</span>
+                            </p>
+                            <p>
+                                <span fxFlex="70"  fxLayoutAlign="start center">{{item.channelName}}</span>
+                            </p>
+                        </div>
+                    </mat-card-title>
+                    <mat-card-content>
+                       
+                    </mat-card-content>
                 </mat-card>
             </ng-container>
         </div>
     </mat-tab>
     <mat-tab label="Realizadas"> 
-        <div fxLayout="row" fxLayoutAlign="start center" style="padding: 2%;">
-            <ng-container *ngFor="let item of livePrevius" style="margin: 1%;">
-                <mat-card class="example-card" fxFlex.lt-sm="100%" fxFlex.lt-md="0 1 calc(50% 11px)" fxFlex="0 1calc(33.3% 11px)">
-                <mat-card-header>
+        <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%;">
+            <ng-container *ngFor="let item of livePrevious" style="margin: 1%;">
+                <mat-card class="mat-card-live"  fxFlex="0 1 calc(33.3% - 11px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+                <mat-card-title class="mat-card-title-live">
 
-                </mat-card-header>
+                </mat-card-title>
                 <mat-card-content>
                     <p>
                     The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
