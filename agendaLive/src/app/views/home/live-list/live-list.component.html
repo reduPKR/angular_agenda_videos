@@ -6,17 +6,17 @@
                     <mat-card-title class="mat-card-title-live">
                         <div class="row">
                             <p>
-                                <span fxFlex="70"  fxLayoutAlign="start center">{{item.liveName}}</span>
+                                <span style="font-size: 0.9rem;" fxFlex="70"  fxLayoutAlign="start center">{{item.liveName}}</span>
                                 <span fxFlex></span>
-                                <span fxFlex="20"  fxLayoutAlign="end center">{{item.liveDate}}</span>
+                                <span style="font-size: 0.7rem;" fxFlex="20"  fxLayoutAlign="end center">{{item.liveDate}}</span>
                             </p>
-                            <p>
+                            <p style="font-size: 0.7rem;">
                                 <span fxFlex="70"  fxLayoutAlign="start center">{{item.channelName}}</span>
                             </p>
                         </div>
                     </mat-card-title>
-                    <mat-card-content>
-                       
+                    <mat-card-content fxLayoutAlign="center center">
+                       <iframe width="560" height="315" [src]="item.urlSafe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </mat-card-content>
                 </mat-card>
             </ng-container>
@@ -25,17 +25,22 @@
     <mat-tab label="Realizadas"> 
         <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%;">
             <ng-container *ngFor="let item of livePrevious" style="margin: 1%;">
-                <mat-card class="mat-card-live"  fxFlex="0 1 calc(33.3% - 11px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
-                <mat-card-title class="mat-card-title-live">
-
-                </mat-card-title>
-                <mat-card-content>
-                    <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                    </p>
-                </mat-card-content>
+                <mat-card class="mat-card-live" fxFlex="0 1 calc(33.3% - 11px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+                    <mat-card-title class="mat-card-title-live">
+                        <div class="row">
+                            <p>
+                                <span style="font-size: 0.9rem;" fxFlex="70"  fxLayoutAlign="start center">{{item.liveName}}</span>
+                                <span fxFlex></span>
+                                <span style="font-size: 0.7rem;" fxFlex="20"  fxLayoutAlign="end center">{{item.liveDate}}</span>
+                            </p>
+                            <p style="font-size: 0.7rem;">
+                                <span fxFlex="70"  fxLayoutAlign="start center">{{item.channelName}}</span>
+                            </p>
+                        </div>
+                    </mat-card-title>
+                    <mat-card-content fxLayoutAlign="center center">
+                        <iframe width="560" height="315" [src]="item.urlSafe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </mat-card-content>
                 </mat-card>
             </ng-container>
         </div>
