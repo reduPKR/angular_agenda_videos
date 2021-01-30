@@ -9,18 +9,19 @@ import { LiveService } from 'src/app/shared/service/live.service';
 })
 export class LiveListComponent implements OnInit {
 
-  livePrevius: Live[] | undefined;
-  liveNext: Live[] | undefined;
+  livePrevius: Live[] = [];
+  liveNext: Live[] = [];
 
   constructor(private liveService: LiveService) { }
 
   ngOnInit(): void {
-    this.getLives();
+    this.getPrevius();
   }
 
-  getLives(){
+  getPrevius(){
     this.liveService.getLivesWithFlag('previous').subscribe(
       data=>{
+        console.log(data)
         this.livePrevius = data.content;
         console.log(this.livePrevius)
       }
@@ -30,8 +31,8 @@ export class LiveListComponent implements OnInit {
   getNext(){
     this.liveService.getLivesWithFlag('next').subscribe(
       data=>{
-        this.livePrevius = data.content;
-        console.log(this.livePrevius)
+        this.liveNext = data.content;
+        console.log(this.liveNext)
       }
     );
   }
