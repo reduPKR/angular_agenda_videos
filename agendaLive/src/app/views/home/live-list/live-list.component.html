@@ -8,7 +8,9 @@
                             <p>
                                 <span style="font-size: 0.9rem;" fxFlex="70"  fxLayoutAlign="start center">{{item.liveName}}</span>
                                 <span fxFlex></span>
-                                <span style="font-size: 0.7rem;" fxFlex="20"  fxLayoutAlign="end center">{{item.liveDate}}</span>
+                                <mat-chip class="mat-chip-date"  fxFlex="20"  fxLayoutAlign="center center">
+                                    <span style="font-size: 0.7rem;">{{item.liveDate | localDateTime}}</span>
+                                </mat-chip>
                             </p>
                             <p style="font-size: 0.7rem;">
                                 <span fxFlex="70"  fxLayoutAlign="start center">{{item.channelName}}</span>
@@ -31,7 +33,9 @@
                             <p>
                                 <span style="font-size: 0.9rem;" fxFlex="70"  fxLayoutAlign="start center">{{item.liveName}}</span>
                                 <span fxFlex></span>
-                                <span style="font-size: 0.7rem;" fxFlex="20"  fxLayoutAlign="end center">{{item.liveDate}}</span>
+                                <mat-chip class="mat-chip-date"  fxFlex="20"  fxLayoutAlign="center center">
+                                    <span style="font-size: 0.7rem;">{{item.liveDate | localDateTime}}</span>
+                                </mat-chip>
                             </p>
                             <p style="font-size: 0.7rem;">
                                 <span fxFlex="70"  fxLayoutAlign="start center">{{item.channelName}}</span>
