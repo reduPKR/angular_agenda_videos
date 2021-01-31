@@ -24,6 +24,7 @@
 }
 
 .mat-chip-date{
-    background-color: #90CAF9 !important; 
+    background-color: #BCBCBC !important; 
     color: black !important;
+    border-radius: 20px;
 }
