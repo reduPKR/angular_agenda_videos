@@ -12,6 +12,8 @@ export class LiveListComponent implements OnInit {
 
   livePrevious: Live[] = [];
   liveNext: Live[] = [];
+  next: boolean = false;
+  previous: boolean = false;
 
   constructor(
     public liveService: LiveService,
@@ -30,6 +32,7 @@ export class LiveListComponent implements OnInit {
         this.livePrevious.forEach(live => {
           live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(live.liveLink);
         });
+        this.previous = true;
       }
     );
 
@@ -40,6 +43,7 @@ export class LiveListComponent implements OnInit {
         this.liveNext.forEach(live => {
           live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(live.liveLink);
         });
+        this.next = true;
       }
     );
   }

@@ -1,4 +1,6 @@
-# AgendaLive
+# AgendaLive  
+Projeto realizado baseado no curso Angular 9 canal Michelli Brito, objetivo do projeto é criar uma agenda para gerenciar as lives  
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
@@ -30,4 +32,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://tburleson-layouts-demos.firebaseapp.com/#/docs
 
 ## fxFlex
-npm i @angular/flex-layout
+npm i @angular/flex-layout  
+  
+## Telas front-end  
+![1](https://user-images.githubusercontent.com/56879793/106374559-1fb80d80-6363-11eb-958a-ea42c269c2c3.PNG)  
+![2](https://user-images.githubusercontent.com/56879793/106374561-247cc180-6363-11eb-907e-f822d0376fee.PNG)

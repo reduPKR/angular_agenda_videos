@@ -1,6 +1,7 @@
 <mat-tab-group class="padding_tab">
     <mat-tab label="Proximas"> 
-        <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%;">
+        <mat-progress-bar *ngIf="!next" mode="indeterminate"></mat-progress-bar>
+        <div *ngIf="next" fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%;">
             <ng-container *ngFor="let item of liveNext" style="margin: 1%;">
                 <mat-card class="mat-card-live" fxFlex="0 1 calc(33.3% - 11px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
                     <mat-card-title class="mat-card-title-live">
@@ -25,7 +26,8 @@
         </div>
     </mat-tab>
     <mat-tab label="Realizadas"> 
-        <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%;">
+        <mat-progress-bar *ngIf="!next" mode="indeterminate"></mat-progress-bar>
+        <div *ngIf="previous" fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%;">
             <ng-container *ngFor="let item of livePrevious" style="margin: 1%;">
                 <mat-card class="mat-card-live" fxFlex="0 1 calc(33.3% - 11px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
                     <mat-card-title class="mat-card-title-live">

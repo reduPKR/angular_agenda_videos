@@ -15,14 +15,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LocalDateTimePipe } from './shared/pipe/local-date-time.pipe';
 import {MatChipsModule} from '@angular/material/chips';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { LiveFormDialogComponent } from './views/home/live-form-dialog/live-form-dialog.component';
+import {MatInputModule} from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LiveListComponent,
-    LocalDateTimePipe
+    LocalDateTimePipe,
+    LiveFormDialogComponent
   ],
   imports: [
     HttpClientModule,
@@ -35,7 +42,14 @@ import {MatChipsModule} from '@angular/material/chips';
     MatTabsModule,
     MatCardModule,
     FlexLayoutModule,
-    MatChipsModule
+    MatChipsModule,
+    MatDialogModule,
+    MatInputModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatProgressBarModule
   ],
   providers: [LocalDateTimePipe],
   bootstrap: [AppComponent]
