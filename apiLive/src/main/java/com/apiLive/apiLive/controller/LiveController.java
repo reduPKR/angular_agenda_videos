@@ -12,6 +12,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 
+import javax.validation.Valid;
+import java.time.LocalDateTime;
+
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/lives")
@@ -28,5 +31,11 @@ public class LiveController {
         }else {
             return new ResponseEntity<Page<Live>>(livePage, HttpStatus.OK);
         }
+    }
+
+    @PostMapping
+    public ResponseEntity<Live> saveLive(@RequestBody @Valid Live live) {
+        live.setRegistrationDate(LocalDateTime.now());
+        return new ResponseEntity<Live>(service.save(live), HttpStatus.CREATED);
     }
 }

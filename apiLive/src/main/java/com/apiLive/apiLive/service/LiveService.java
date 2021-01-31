@@ -28,4 +28,8 @@ public class LiveService {
             return repository.findAll(pageable);
         }
     }
+
+    public Live save(Live live) {
+        return repository.save(live);
+    }
 }
