@@ -1,5 +1,5 @@
 # AgendaLive  
-Projeto realizado baseado no curso Angular 9 canal Michelli Brito, objetivo do projeto é criar uma agenda para gerenciar as lives  
+Projeto realizado baseado no curso Angular 9 canal Michelli Brito (YouTube), objetivo do projeto é criar uma agenda para gerenciar as lives  
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
